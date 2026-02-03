@@ -27,7 +27,7 @@ elif 12 <= age <= 64:
 else:
     price = 12.95
 # Print the final price formatted as currency
-print(f"The buffet price for your age ({age}) is: ${price:,.2f}")
+print(f"For your age ({age}) the buffet price is: ${price:,.2f}")
 # Example Outputs:
 # Age: 0  -> Price: $0.00
 # Age: 7  -> Price: $7.00
