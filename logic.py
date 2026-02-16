@@ -1,16 +1,5 @@
 """
 -----------------------------------------------------------------------
-ASSIGNMENT REQUIREMENTS
------------------------------------------------------------------------
-[ ] 1. Header Docstring included with your name.
-[ ] 2. Ask user for two integers (num1 and num2).
-[ ] 3. Perform 6 logical checks: (Both > 0, Both > 100, Either Even, Either < 100, Not Equal, Not Zero).
-[ ] 4. Use if/elif/else to categorize num1 (Positive/Negative/Zero).
-[ ] 5. Code is clean and uses descriptive variable names.
-[ ] 6. Upload to GitHub and paste the link below.
------------------------------------------------------------------------
-
-
 DEMO: The Softball Strategizer (Assignment 4A Logic)
 AUTHOR: Julie Gavas
 PURPOSE: Demonstrating AND, OR, NOT,ELIF branching and the modulus (%) operator using softball actions and number
@@ -41,8 +30,41 @@ print("Help us figure out what the batter should do!")
 choice_1 = int(input("First action (Pick 1-6): "))
 choice_2 = int(input("Second action (Pick 1-6): "))
 
+
 inning = int(input("Enter the current inning number: "))
 run_diff = int(input("Enter the run differential (your score - opponent score): "))
+
+print("-" * 40)
+
+# ---  UPDATED LOGIC TO INCLLUDE 6 CHECKS ----
+print("\n--- LOGIC CHECKS  ---")
+
+num1 = choice_1
+num2 = choice_2
+
+# 1. Are both numbers greater than 0?
+both_positive = (num1 > 0 and num2 > 0)
+print(f"1) Both numbers > 0: {both_positive}")
+
+# 2. Are both numbers greater than 100?
+both_over_100 = (num1 > 100 and num2 > 100)
+print(f"2) Both numbers > 100: {both_over_100}")
+
+# 3. Is at least one of them even?
+either_even = (num1 % 2 == 0 or num2 % 2 == 0)
+print(f"3) At least one number is even: {either_even}")
+
+# 4. Is either number less than 100?
+either_under_100 = (num1 < 100 or num2 < 100)
+print(f"4) At least one number < 100: {either_under_100}")
+
+# 5. Are they not equal?
+not_equal = (num1 != num2)
+print(f"5) Numbers are not equal: {not_equal}")
+
+# 6. Is it true that neither number is zero?
+neither_zero = (num1 != 0 and num2 != 0)
+print(f"6) Neither number is zero: {neither_zero}")
 
 print("-" * 40)
 
