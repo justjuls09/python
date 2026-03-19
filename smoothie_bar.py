@@ -95,6 +95,4 @@ def main():
     # 5. PRODUCTION TICKET
     blend(user_size, user_base, user_fruit, user_scoops)
 
-
-if __name__ == "__main__":
-    main()
+main()
