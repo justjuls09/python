@@ -1,7 +1,7 @@
 #pizza_engine.py
 """
 -----------------------------------------------------------------------
-ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
+ASSIGNMENT 10A: JOPLIN'S PIZZA ENGINE
 -----------------------------------------------------------------------
 [x] 1. Header Docstring included.
 [x] 2. Global constant TOPPINGS defined as a Tuple in ALL_CAPS.
