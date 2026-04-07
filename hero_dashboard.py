@@ -1,0 +1,74 @@
+#hero_dashboard.py
+"""
+-----------------------------------------------------------------------
+ASSIGNMENT 11A: THE OFFICE HERO DASHBOARD
+-----------------------------------------------------------------------
+[x] 1. Header Docstring included.
+[x] 2. Global constants OFFICE_NAME and TAX_RATE defined in ALL_CAPS.
+[x] 3. Function 'process_expenses' returns TWO values (float, string).
+[x] 4. main() function uses try/except for numeric price/qty inputs.
+[x] 5. main() calls function using KEYWORD ARGUMENTS.
+[x] 6. main() correctly unpacks and prints both return values.
+-----------------------------------------------------------------------
+"""
+
+"""
+Author: Julie Gavas
+Program: Logic Handoff - The Office Hero Dashboard
+Description: This program calculates the subtotal, adds tax, and returns two values:
+the final float and a formatted summary string.
+"""
+
+# ---------------------------------------------------------------
+# Global Constants
+# ---------------------------------------------------------------
+OFFICE_NAME = "The Office Hero Dashboard"
+TAX_RATE = 0.05
+
+
+def process_expenses(item_name, price, quantity):
+    """
+    Calculates subtotal, tax, and returns two values:
+    final_total (float) and summary_msg (string)
+    """
+
+    subtotal = price * quantity
+    total_cost = subtotal * (1 + TAX_RATE)
+
+    summary_msg = (
+        f"Office: {OFFICE_NAME}\n"
+        f"Item: {item_name}\n"
+        f"Price: ${price:.2f}\n"
+        f"Quantity: {quantity}\n"
+        f"Subtotal: ${subtotal:.2f}\n"
+        f"Tax Rate: {TAX_RATE:.0%}"
+    )
+
+    return total_cost, summary_msg
+
+
+def main():
+    print(f"\nWelcome to {OFFICE_NAME}\n")
+
+    name = input("Enter item name: ")
+
+    try:
+        price = float(input("Enter price: "))
+    except ValueError:
+        print("Invalid price. Defaulting to 1.00")
+        price = 1.00
+
+    try:
+        quantity = int(input("Enter quantity: "))
+    except ValueError:
+        print("Invalid quantity. Defaulting to 1")
+        quantity = 1
+
+    final_cost, final_msg = process_expenses(item_name=name, price=price, quantity=quantity)
+
+    print("\n----- SUMMARY -----")
+    print(final_msg)
+    print(f"\nFinal Total: ${final_cost:.2f}")
+
+
+main()
