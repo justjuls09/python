@@ -1,4 +1,3 @@
-#pizza_engine.py
 """
 -----------------------------------------------------------------------
 ASSIGNMENT 10A: JOPLIN'S PIZZA ENGINE
@@ -24,6 +23,10 @@ TOPPINGS = ("Pepperoni", "Onions", "Sausage", "Green Peppers")
 def make_pizza(customer, size, topping, is_delivery=False):
     """
     Builds and displays a pizza order summary.
+    :param customer: Name of the customer placing the order
+    :param size: Size of the pizza (Small, Medium, Large) 
+    :param topping: Topping chosenfrom the TOPPINGS list
+    :param is_delivery: Determine if order is for delivery (default False)
     """
     print("\n--- ORDER SUMMARY ---")
     print(f"Customer: {customer}")
