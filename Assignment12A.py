@@ -20,6 +20,8 @@ breaks it into individual variables, prints each category, and audits
 the PRICES category using string-to-float conversion.
 """
 
+import datetime # This imports the datetime library which will timestamp the reports
+
 CONFIG_FILE = "menu_config.txt"
 
 
